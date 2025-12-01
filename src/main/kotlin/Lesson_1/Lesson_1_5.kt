@@ -1,14 +1,14 @@
 package Lesson_1
 
-const val constantlyTime = 60 // Значение секунд в одной минуте либо минут в одном часе
+const val MINUTES_PER_HOUR = 60
 fun main() {
-    val timeInSpace = 6480 //время в секундах
-    val minutes = timeInSpace / constantlyTime
-    val remainingSeconds = timeInSpace % constantlyTime
+    val timeInSpace = 6480
+    val minutes = timeInSpace / MINUTES_PER_HOUR
+    val remainingSeconds = timeInSpace % MINUTES_PER_HOUR
     println(remainingSeconds)
-    val hours = minutes / constantlyTime
+    val hours = minutes / MINUTES_PER_HOUR
     println(hours)
-    val remainingMinutes = minutes % constantlyTime
+    val remainingMinutes = minutes % MINUTES_PER_HOUR
     println(remainingMinutes)
     println(String.format("%02d:%02d:%02d", hours, remainingMinutes, remainingSeconds))
 
